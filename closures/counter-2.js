@@ -12,21 +12,12 @@
  decrement() reduces the current value by 1 and then returns it.
  reset() sets the current value to init and then returns it. */
 
-const createCounter = function(init) {
-   let currentValue = init;
+const createCounter = init => {
+  let currentValue = init;
 
   return {
-    increment: function() {
-      currentValue += 1;
-      return currentValue;
-    },
-    decrement: function() {
-      currentValue -= 1;
-      return currentValue;
-    },
-    reset: function() {
-      currentValue = init;
-      return currentValue;
-    }
+    increment: () => ++currentValue,
+    decrement: () => --currentValue,
+    reset: () => currentValue = init
   };
 };
