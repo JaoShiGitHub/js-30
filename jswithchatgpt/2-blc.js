@@ -46,3 +46,20 @@ function countVowels(str) {
 
 console.log(countVowels("hello")); // Expected output: 2
 console.log(countVowels("javascript")); // Expected output: 3
+
+
+// 4. Palindrome Check
+// Write a function that checks if a word is a palindrome (a word that reads the same backward as forward). Return true or false.
+
+function isPalindrome(str) {
+  // Your code here
+  let result = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    result += str[i];
+  }
+  return result === str;
+}
+
+console.log(isPalindrome("madam")); // Expected output: true
+console.log(isPalindrome("hello")); // Expected output: false
+
