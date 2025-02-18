@@ -75,3 +75,18 @@ function countWords(sentence) {
 
 console.log(countWords("Hello world")); // Expected output: 2
 console.log(countWords("This is a simple sentence")); // Expected output: 5
+
+
+// 5. Find All Even Numbers in an Array
+// Write a function that returns a new array with only the even numbers from the input array.
+
+function findEvenNumbers(arr) {
+  let result = [];
+  for (let n of arr) {
+    if (n % 2 === 0) result.push(n);
+  }
+  return result;
+}
+
+console.log(findEvenNumbers([1, 2, 3, 4, 5])); // Expected output: [2, 4]
+console.log(findEvenNumbers([10, 15, 20, 25])); // Expected output: [10, 20]
