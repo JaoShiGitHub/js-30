@@ -16,3 +16,21 @@ function factorial(n) {
 
 console.log(factorial(5)); // Expected output: 120
 console.log(factorial(7)); // Expected output: 5040
+
+
+// 2. Find the Largest Number in an Array
+// Write a function that takes an array and returns the largest number.
+
+function findLargest(arr) {
+  // Your code here
+  let curr = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > curr) {
+      curr = arr[i];
+    }
+  }
+  return curr;
+}
+
+console.log(findLargest([10, 5, 20, 8])); // Expected output: 20
+console.log(findLargest([100, 200, 150])); // Expected output: 200
