@@ -50,3 +50,28 @@ function sumArray(arr) {
 
 console.log(sumArray([1, 2, 3, 4, 5])); // Expected output: 15
 console.log(sumArray([10, -2, 7])); // Expected output: 15
+
+
+// 4. Count Words in a Sentence
+// Write a function that counts how many words are in a sentence.
+
+function countWords(sentence) {
+  // Your code here
+  let words = [];
+  let word = "";
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] !== " ") {
+      word += sentence[i];
+    } else if (word) {
+      words.push(word);
+      word = "";
+    }
+  }
+
+  if (word) words.push(word);
+
+  return words.length;
+}
+
+console.log(countWords("Hello world")); // Expected output: 2
+console.log(countWords("This is a simple sentence")); // Expected output: 5
