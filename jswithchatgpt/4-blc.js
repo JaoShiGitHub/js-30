@@ -58,3 +58,22 @@ function longestWord(sentence) {
 
 console.log(longestWord("I love programming")); // Expected output: "programming"
 console.log(longestWord("JavaScript is fun")); // Expected output: "JavaScript"
+
+// 4. Find Common Elements in Two Arrays
+// Write a function that returns an array of common elements from two input arrays.
+
+function commonElements(arr1, arr2) {
+  let result = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        result.push(arr1[i]);
+      }
+    }
+  }
+  return result;
+}
+
+console.log(commonElements([1, 2, 3], [2, 3, 4])); // Expected output: [2, 3]
+console.log(commonElements([5, 6, 7], [7, 8, 9])); // Expected output: [7]
+
