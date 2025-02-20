@@ -33,16 +33,28 @@ console.log(isPrime(10)); // Expected output: false
 // Write a function that returns the longest word in a sentence.
 
 function longestWord(sentence) {
-  // Your code here
-  let result = sentence[0];
-
-  for (let i = 0; i < sentence.length; i++) {
-    if (result.length < sentence[i].length) {
-      result = sentence[i];
+  let words = [];
+  let word = "";
+  let longestWord = "";
+  for (let char of sentence) {
+    if (char !== " ") {
+      word += char;
+    } else if (word) {
+      words.push(word);
+      word = "";
     }
   }
-  return result;
+
+  if (word) words.push(word);
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+
+  return longestWord;
 }
 
 console.log(longestWord("I love programming")); // Expected output: "programming"
-console.log(longestWord("JavaScript is fun"));
+console.log(longestWord("JavaScript is fun")); // Expected output: "JavaScript"
