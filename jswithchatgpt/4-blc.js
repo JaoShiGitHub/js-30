@@ -77,3 +77,18 @@ function commonElements(arr1, arr2) {
 console.log(commonElements([1, 2, 3], [2, 3, 4])); // Expected output: [2, 3]
 console.log(commonElements([5, 6, 7], [7, 8, 9])); // Expected output: [7]
 
+// 5. Generate Fibonacci Sequence
+// Write a function that returns the first n numbers of the Fibonacci sequence. (Fibonacci: 0, 1, 1, 2, 3, 5, 8...)
+
+function fibonacci(n) {
+  let arr = [0, 1];
+  function generateFibonacci() {
+    if (arr.length >= n) return arr;
+    arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+    return generateFibonacci();
+  }
+  return generateFibonacci();
+}
+
+console.log(fibonacci(5)); // Expected output: [0, 1, 1, 2, 3]
+console.log(fibonacci(7)); // Expected output: [0, 1, 1, 2, 3, 5, 8]
